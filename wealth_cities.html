@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<!--
+  Lightweight report template.
+
+  build_html.py replaces the {"title": "World's Wealthiest Cities", "source": "Source: wealth_cities_2025.csv", "refreshed_utc": "2026-09-30 18:40 UTC", "rows": [{"RANK_NO": 1, "CITY": "New York City", "COUNTRY": "United States", "REGION": "North America", "MILLIONAIRES": 384500, "CENTI_MILLIONAIRES": 818, "BILLIONAIRES": 66, "WEALTH_GROWTH_PCT": 45.0, "POPULATION": 8500000, "SOURCE_YEAR": 2025}, {"RANK_NO": 2, "CITY": "The Bay Area", "COUNTRY": "United States", "REGION": "North America", "MILLIONAIRES": 342400, "CENTI_MILLIONAIRES": 756, "BILLIONAIRES": 82, "WEALTH_GROWTH_PCT": 98.0, "POPULATION": 7600000, "SOURCE_YEAR": 2025}, {"RANK_NO": 3, "CITY": "Tokyo", "COUNTRY": "Japan", "REGION": "Asia", "MILLIONAIRES": 292300, "CENTI_MILLIONAIRES": 262, "BILLIONAIRES": 18, "WEALTH_GROWTH_PCT": 4.0, "POPULATION": 37000000, "SOURCE_YEAR": 2025}, {"RANK_NO": 4, "CITY": "Singapore", "COUNTRY": "Singapore", "REGION": "Asia", "MILLIONAIRES": 242400, "CENTI_MILLIONAIRES": 333, "BILLIONAIRES": 30, "WEALTH_GROWTH_PCT": 62.0, "POPULATION": 6000000, "SOURCE_YEAR": 2025}, {"RANK_NO": 5, "CITY": "Los Angeles", "COUNTRY": "United States", "REGION": "North America", "MILLIONAIRES": 220600, "CENTI_MILLIONAIRES": 516, "BILLIONAIRES": 45, "WEALTH_GROWTH_PCT": 35.0, "POPULATION": 3900000, "SOURCE_YEAR": 2025}, {"RANK_NO": 6, "CITY": "London", "COUNTRY": "United Kingdom", "REGION": "Europe", "MILLIONAIRES": 215700, "CENTI_MILLIONAIRES": 352, "BILLIONAIRES": 33, "WEALTH_GROWTH_PCT": -12.0, "POPULATION": 9800000, "SOURCE_YEAR": 2025}, {"RANK_NO": 7, "CITY": "Paris", "COUNTRY": "France", "REGION": "Europe", "MILLIONAIRES": 160100, "CENTI_MILLIONAIRES": 277, "BILLIONAIRES": 22, "WEALTH_GROWTH_PCT": 5.0, "POPULATION": 11300000, "SOURCE_YEAR": 2025}, {"RANK_NO": 8, "CITY": "Hong Kong", "COUNTRY": "Hong Kong", "REGION": "Asia", "MILLIONAIRES": 154900, "CENTI_MILLIONAIRES": 346, "BILLIONAIRES": 40, "WEALTH_GROWTH_PCT": 3.0, "POPULATION": 7500000, "SOURCE_YEAR": 2025}, {"RANK_NO": 9, "CITY": "Sydney", "COUNTRY": "Australia", "REGION": "Oceania", "MILLIONAIRES": 152900, "CENTI_MILLIONAIRES": 224, "BILLIONAIRES": 22, "WEALTH_GROWTH_PCT": 28.0, "POPULATION": 5200000, "SOURCE_YEAR": 2025}, {"RANK_NO": 10, "CITY": "Chicago", "COUNTRY": "United States", "REGION": "North America", "MILLIONAIRES": 127100, "CENTI_MILLIONAIRES": 295, "BILLIONAIRES": 25, "WEALTH_GROWTH_PCT": 24.0, "POPULATION": 2700000, "SOURCE_YEAR": 2025}, {"RANK_NO": 11, "CITY": "Milan", "COUNTRY": "Italy", "REGION": "Europe", "MILLIONAIRES": 115000, "CENTI_MILLIONAIRES": 182, "BILLIONAIRES": 17, "WEALTH_GROWTH_PCT": 24.0, "POPULATION": 3200000, "SOURCE_YEAR": 2025}, {"RANK_NO": 12, "CITY": "Beijing", "COUNTRY": "China", "REGION": "Asia", "MILLIONAIRES": 114300, "CENTI_MILLIONAIRES": 316, "BILLIONAIRES": 38, "WEALTH_GROWTH_PCT": 72.0, "POPULATION": 22600000, "SOURCE_YEAR": 2025}, {"RANK_NO": 13, "CITY": "Osaka-Kyoto-Kobe", "COUNTRY": "Japan", "REGION": "Asia", "MILLIONAIRES": 112200, "CENTI_MILLIONAIRES": 128, "BILLIONAIRES": 12, "WEALTH_GROWTH_PCT": 20.0, "POPULATION": 5500000, "SOURCE_YEAR": 2025}, {"RANK_NO": 14, "CITY": "Shanghai", "COUNTRY": "China", "REGION": "Asia", "MILLIONAIRES": 110500, "CENTI_MILLIONAIRES": 293, "BILLIONAIRES": 35, "WEALTH_GROWTH_PCT": 67.0, "POPULATION": 30500000, "SOURCE_YEAR": 2025}, {"RANK_NO": 15, "CITY": "Toronto", "COUNTRY": "Canada", "REGION": "North America", "MILLIONAIRES": 108400, "CENTI_MILLIONAIRES": 184, "BILLIONAIRES": 20, "WEALTH_GROWTH_PCT": 18.0, "POPULATION": 2800000, "SOURCE_YEAR": 2025}, {"RANK_NO": 16, "CITY": "Melbourne", "COUNTRY": "Australia", "REGION": "Oceania", "MILLIONAIRES": 94000, "CENTI_MILLIONAIRES": 108, "BILLIONAIRES": 12, "WEALTH_GROWTH_PCT": 36.0, "POPULATION": 5400000, "SOURCE_YEAR": 2025}, {"RANK_NO": 17, "CITY": "Houston", "COUNTRY": "United States", "REGION": "North America", "MILLIONAIRES": 81800, "CENTI_MILLIONAIRES": 210, "BILLIONAIRES": 16, "WEALTH_GROWTH_PCT": 75.0, "POPULATION": 2300000, "SOURCE_YEAR": 2025}, {"RANK_NO": 18, "CITY": "Dubai", "COUNTRY": "United Arab Emirates", "REGION": "Middle East", "MILLIONAIRES": 81200, "CENTI_MILLIONAIRES": 237, "BILLIONAIRES": 20, "WEALTH_GROWTH_PCT": 102.0, "POPULATION": 3100000, "SOURCE_YEAR": 2025}, {"RANK_NO": 19, "CITY": "Frankfurt", "COUNTRY": "Germany", "REGION": "Europe", "MILLIONAIRES": 80300, "CENTI_MILLIONAIRES": 132, "BILLIONAIRES": 13, "WEALTH_GROWTH_PCT": 9.0, "POPULATION": 804000, "SOURCE_YEAR": 2025}, {"RANK_NO": 20, "CITY": "Zurich", "COUNTRY": "Switzerland", "REGION": "Europe", "MILLIONAIRES": 77800, "CENTI_MILLIONAIRES": 180, "BILLIONAIRES": 10, "WEALTH_GROWTH_PCT": 10.0, "POPULATION": 1450000, "SOURCE_YEAR": 2025}, {"RANK_NO": 21, "CITY": "Dallas", "COUNTRY": "United States", "REGION": "North America", "MILLIONAIRES": 72400, "CENTI_MILLIONAIRES": 135, "BILLIONAIRES": 16, "WEALTH_GROWTH_PCT": 85.0, "POPULATION": 1300000, "SOURCE_YEAR": 2025}, {"RANK_NO": 22, "CITY": "Geneva", "COUNTRY": "Switzerland", "REGION": "Europe", "MILLIONAIRES": 70200, "CENTI_MILLIONAIRES": 215, "BILLIONAIRES": 14, "WEALTH_GROWTH_PCT": 26.0, "POPULATION": 645000, "SOURCE_YEAR": 2025}, {"RANK_NO": 23, "CITY": "Munich", "COUNTRY": "Germany", "REGION": "Europe", "MILLIONAIRES": 69800, "CENTI_MILLIONAIRES": 87, "BILLIONAIRES": 11, "WEALTH_GROWTH_PCT": 17.0, "POPULATION": 1500000, "SOURCE_YEAR": 2025}, {"RANK_NO": 24, "CITY": "Seoul", "COUNTRY": "South Korea", "REGION": "Asia", "MILLIONAIRES": 66000, "CENTI_MILLIONAIRES": 148, "BILLIONAIRES": 16, "WEALTH_GROWTH_PCT": 17.0, "POPULATION": 10000000, "SOURCE_YEAR": 2025}, {"RANK_NO": 25, "CITY": "Seattle", "COUNTRY": "United States", "REGION": "North America", "MILLIONAIRES": 53100, "CENTI_MILLIONAIRES": 127, "BILLIONAIRES": 11, "WEALTH_GROWTH_PCT": 48.0, "POPULATION": 764000, "SOURCE_YEAR": 2025}, {"RANK_NO": 26, "CITY": "Rome", "COUNTRY": "Italy", "REGION": "Europe", "MILLIONAIRES": 51800, "CENTI_MILLIONAIRES": 83, "BILLIONAIRES": 9, "WEALTH_GROWTH_PCT": 9.0, "POPULATION": 4350000, "SOURCE_YEAR": 2025}, {"RANK_NO": 27, "CITY": "Mumbai", "COUNTRY": "India", "REGION": "Asia", "MILLIONAIRES": 51200, "CENTI_MILLIONAIRES": 205, "BILLIONAIRES": 25, "WEALTH_GROWTH_PCT": 69.0, "POPULATION": 22100000, "SOURCE_YEAR": 2025}, {"RANK_NO": 28, "CITY": "Shenzhen", "COUNTRY": "China", "REGION": "Asia", "MILLIONAIRES": 50800, "CENTI_MILLIONAIRES": 156, "BILLIONAIRES": 22, "WEALTH_GROWTH_PCT": 142.0, "POPULATION": 13500000, "SOURCE_YEAR": 2025}, {"RANK_NO": 29, "CITY": "Vancouver", "COUNTRY": "Canada", "REGION": "North America", "MILLIONAIRES": 46400, "CENTI_MILLIONAIRES": 90, "BILLIONAIRES": 11, "WEALTH_GROWTH_PCT": 52.0, "POPULATION": 662000, "SOURCE_YEAR": 2025}, {"RANK_NO": 30, "CITY": "Amsterdam", "COUNTRY": "Netherlands", "REGION": "Europe", "MILLIONAIRES": 46100, "CENTI_MILLIONAIRES": 93, "BILLIONAIRES": 9, "WEALTH_GROWTH_PCT": 32.0, "POPULATION": 1200000, "SOURCE_YEAR": 2025}, {"RANK_NO": 31, "CITY": "Boston", "COUNTRY": "United States", "REGION": "North America", "MILLIONAIRES": 45000, "CENTI_MILLIONAIRES": 112, "BILLIONAIRES": 8, "WEALTH_GROWTH_PCT": 40.0, "POPULATION": 639000, "SOURCE_YEAR": 2025}, {"RANK_NO": 32, "CITY": "Miami", "COUNTRY": "United States", "REGION": "North America", "MILLIONAIRES": 38800, "CENTI_MILLIONAIRES": 180, "BILLIONAIRES": 17, "WEALTH_GROWTH_PCT": 94.0, "POPULATION": 465000, "SOURCE_YEAR": 2025}, {"RANK_NO": 33, "CITY": "Madrid", "COUNTRY": "Spain", "REGION": "Europe", "MILLIONAIRES": 34900, "CENTI_MILLIONAIRES": 72, "BILLIONAIRES": 8, "WEALTH_GROWTH_PCT": 5.0, "POPULATION": 6800000, "SOURCE_YEAR": 2025}, {"RANK_NO": 34, "CITY": "Perth", "COUNTRY": "Australia", "REGION": "Oceania", "MILLIONAIRES": 34600, "CENTI_MILLIONAIRES": 66, "BILLIONAIRES": 9, "WEALTH_GROWTH_PCT": 32.0, "POPULATION": 2200000, "SOURCE_YEAR": 2025}, {"RANK_NO": 35, "CITY": "Hangzhou", "COUNTRY": "China", "REGION": "Asia", "MILLIONAIRES": 32200, "CENTI_MILLIONAIRES": 104, "BILLIONAIRES": 12, "WEALTH_GROWTH_PCT": 108.0, "POPULATION": 8600000, "SOURCE_YEAR": 2025}, {"RANK_NO": 36, "CITY": "Austin", "COUNTRY": "United States", "REGION": "North America", "MILLIONAIRES": 32000, "CENTI_MILLIONAIRES": 90, "BILLIONAIRES": 10, "WEALTH_GROWTH_PCT": 90.0, "POPULATION": 989000, "SOURCE_YEAR": 2025}, {"RANK_NO": 37, "CITY": "Vienna", "COUNTRY": "Austria", "REGION": "Europe", "MILLIONAIRES": 31500, "CENTI_MILLIONAIRES": 74, "BILLIONAIRES": 7, "WEALTH_GROWTH_PCT": 20.0, "POPULATION": 2000000, "SOURCE_YEAR": 2025}, {"RANK_NO": 38, "CITY": "Taipei City", "COUNTRY": "Taiwan", "REGION": "Asia", "MILLIONAIRES": 31400, "CENTI_MILLIONAIRES": 85, "BILLIONAIRES": 16, "WEALTH_GROWTH_PCT": 60.0, "POPULATION": 2800000, "SOURCE_YEAR": 2025}, {"RANK_NO": 39, "CITY": "Delhi", "COUNTRY": "India", "REGION": "Asia", "MILLIONAIRES": 31200, "CENTI_MILLIONAIRES": 125, "BILLIONAIRES": 16, "WEALTH_GROWTH_PCT": 82.0, "POPULATION": 34700000, "SOURCE_YEAR": 2025}, {"RANK_NO": 40, "CITY": "Moscow", "COUNTRY": "Russia", "REGION": "Europe", "MILLIONAIRES": 30000, "CENTI_MILLIONAIRES": 178, "BILLIONAIRES": 23, "WEALTH_GROWTH_PCT": -25.0, "POPULATION": 12700000, "SOURCE_YEAR": 2025}, {"RANK_NO": 41, "CITY": "Washington, D.C.", "COUNTRY": "United States", "REGION": "North America", "MILLIONAIRES": 28900, "CENTI_MILLIONAIRES": 97, "BILLIONAIRES": 12, "WEALTH_GROWTH_PCT": 92.0, "POPULATION": 684000, "SOURCE_YEAR": 2025}, {"RANK_NO": 42, "CITY": "Berlin", "COUNTRY": "Germany", "REGION": "Europe", "MILLIONAIRES": 28400, "CENTI_MILLIONAIRES": 50, "BILLIONAIRES": 5, "WEALTH_GROWTH_PCT": 25.0, "POPULATION": 3600000, "SOURCE_YEAR": 2025}, {"RANK_NO": 43, "CITY": "Brisbane", "COUNTRY": "Australia", "REGION": "Oceania", "MILLIONAIRES": 26400, "CENTI_MILLIONAIRES": 39, "BILLIONAIRES": 4, "WEALTH_GROWTH_PCT": 22.0, "POPULATION": 2600000, "SOURCE_YEAR": 2025}, {"RANK_NO": 44, "CITY": "Nice to Èze", "COUNTRY": "France", "REGION": "Europe", "MILLIONAIRES": 25500, "CENTI_MILLIONAIRES": 92, "BILLIONAIRES": 9, "WEALTH_GROWTH_PCT": 18.0, "POPULATION": 343000, "SOURCE_YEAR": 2025}, {"RANK_NO": 45, "CITY": "Guangzhou", "COUNTRY": "China", "REGION": "Asia", "MILLIONAIRES": 24300, "CENTI_MILLIONAIRES": 69, "BILLIONAIRES": 9, "WEALTH_GROWTH_PCT": 88.0, "POPULATION": 14900000, "SOURCE_YEAR": 2025}, {"RANK_NO": 46, "CITY": "Manchester & Trafford", "COUNTRY": "United Kingdom", "REGION": "Europe", "MILLIONAIRES": 23400, "CENTI_MILLIONAIRES": 68, "BILLIONAIRES": 7, "WEALTH_GROWTH_PCT": 7.0, "POPULATION": 2800000, "SOURCE_YEAR": 2025}, {"RANK_NO": 47, "CITY": "Stockholm", "COUNTRY": "Sweden", "REGION": "Europe", "MILLIONAIRES": 23100, "CENTI_MILLIONAIRES": 60, "BILLIONAIRES": 11, "WEALTH_GROWTH_PCT": 2.0, "POPULATION": 1700000, "SOURCE_YEAR": 2025}, {"RANK_NO": 48, "CITY": "Tel Aviv & Herzliya", "COUNTRY": "Israel", "REGION": "Middle East", "MILLIONAIRES": 22600, "CENTI_MILLIONAIRES": 76, "BILLIONAIRES": 9, "WEALTH_GROWTH_PCT": 25.0, "POPULATION": 4600000, "SOURCE_YEAR": 2025}, {"RANK_NO": 49, "CITY": "Dublin", "COUNTRY": "Ireland", "REGION": "Europe", "MILLIONAIRES": 22300, "CENTI_MILLIONAIRES": 43, "BILLIONAIRES": 5, "WEALTH_GROWTH_PCT": 34.0, "POPULATION": 1300000, "SOURCE_YEAR": 2025}, {"RANK_NO": 50, "CITY": "Lisbon", "COUNTRY": "Portugal", "REGION": "Europe", "MILLIONAIRES": 22200, "CENTI_MILLIONAIRES": 45, "BILLIONAIRES": 4, "WEALTH_GROWTH_PCT": 40.0, "POPULATION": 3000000, "SOURCE_YEAR": 2025}]} token (in the <script id="data"> block near
+  the end) with a JSON payload: { title, source, refreshed_utc, rows: [...] }.
+  Everything else is static: one HTML file, no external CSS, JS, or fonts, so the
+  output can be emailed, dropped on a share, or served from a Snowflake stage.
+
+  Layout is mobile-first. The default reader is on an iPhone held upright, so
+  the page reads top to bottom: title -> chart -> controls -> totals -> table.
+  The chart comes first because it is the answer; the controls sit beneath it.
+
+  Sizes are in rem (not px) so the page follows the reader's font-size setting.
+  1rem = the browser's root font size (16px by default). Exceptions, kept in px
+  on purpose: 1px hairline borders and grid lines, which should stay one device
+  pixel thin at any text size, and shadow blur, which is decoration only.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!-- Render at device width on phones instead of a zoomed-out desktop page. -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Report</title>
+<style>
+  /* ---- Colour tokens ----------------------------------------------------
+     All colours live here as custom properties so light and dark mode are
+     one swap. --pos / --neg are the bar colours for growth / decline. */
+  :root {
+    color-scheme: light;
+    --page: #f9f9f7;
+    --surface: #fcfcfb;
+    --ink: #0b0b0b;
+    --ink-2: #52514e;
+    --muted: #6b6964;
+    --grid: #e1e0d9;
+    --zero: #898781;
+    --border: rgba(11, 11, 11, 0.10);
+    --btn: #f0efec;
+    --hover: rgba(11, 11, 11, 0.04);
+    --pos: #2a78d6;
+    --neg: #e34948;
+  }
+  /* Dark mode: follow the OS setting; same tokens, darker values. */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --page: #0d0d0d;
+      --surface: #1a1a19;
+      --ink: #ffffff;
+      --ink-2: #c3c2b7;
+      --muted: #a3a29b;
+      --grid: #2c2c2a;
+      --zero: #6b6a66;
+      --border: rgba(255, 255, 255, 0.10);
+      --btn: #262624;
+      --hover: rgba(255, 255, 255, 0.05);
+      --pos: #3987e5;
+      --neg: #e66767;
+    }
+  }
+
+  /* iPhone / iPad only: adopt the reader's iOS Dynamic Type size
+     (Settings > Display & Brightness > Text Size). Without this, iOS Safari
+     ignores that setting and 1rem stays 16px. -webkit-touch-callout is
+     supported only on iOS, so desktop Safari (where this font keyword yields
+     a small desktop size) is left alone. Because every size below is in rem,
+     the whole page, chart included, scales with it. */
+  @supports (font: -apple-system-body) and (-webkit-touch-callout: none) {
+    html { font: -apple-system-body; }
+  }
+
+  /* ---- Page base ------------------------------------------------------- */
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.45;
+    /* Turn off the browser's own scroll anchoring. The script keeps the
+       tapped control in place itself (see keepInPlace), and two mechanisms
+       correcting the same shift would fight. */
+    overflow-anchor: none;
+  }
+  /* Centre column; capped width keeps lines readable on desktop. */
+  main { max-width: 65rem; margin: 0 auto; padding: 1.75rem 1rem 3rem; }
+
+  /* ---- Header: title, refresh time, source ----------------------------- */
+  header { margin-bottom: 1.125rem; }
+  /* Title left, refresh time right; wraps to two lines on narrow screens. */
+  .title-row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0.25rem 1rem; }
+  h1 { font-size: 1.5rem; font-weight: 650; letter-spacing: -0.01em; margin: 0; }
+  .meta { color: var(--ink-2); font-size: 0.8125rem; }
+
+  /* ---- Card: holds chart, controls, totals, table ---------------------- */
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 0.75rem; padding: 1.125rem 1.25rem 1rem; }
+  h2 { font-size: 1rem; font-weight: 600; margin: 0; }
+  .sub { color: var(--ink-2); font-size: 0.8125rem; margin: 0.125rem 0 0.75rem; }
+
+  /* ---- Buttons (shared) ------------------------------------------------
+     Pill-shaped chips. aria-pressed="true" marks the selected chip, so the
+     visual state and the screen-reader state come from one attribute. */
+  button {
+    font: inherit;
+    font-size: 0.8125rem;
+    color: var(--ink);
+    background: var(--btn);
+    border: 1px solid var(--border);
+    border-radius: 999rem;
+    padding: 0.3125rem 0.75rem;
+    cursor: pointer;
+  }
+  button:hover { border-color: var(--zero); }
+  button[aria-pressed="true"] { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+  /* Visible focus ring for keyboard users only (not on tap or click). */
+  button:focus-visible { outline: 0.125rem solid var(--pos); outline-offset: 0.125rem; }
+  /* Row count shown inside a region chip, e.g. "Europe 20". */
+  .n { opacity: 0.7; margin-left: 0.25rem; font-variant-numeric: tabular-nums; }
+
+  /* Touch screens: make every button at least 2.75rem (44px at default size)
+     tall, the minimum tap target Apple recommends. Mouse users keep the
+     compact size. */
+  @media (pointer: coarse) {
+    button { min-height: 2.75rem; padding: 0.5rem 0.875rem; }
+  }
+
+  /* ---- Chart ----------------------------------------------------------- */
+  /* position: relative so the tooltip can be placed inside the chart box. */
+  .chart { position: relative; }
+  svg { display: block; width: 100%; overflow: visible; }
+  svg text { font-family: inherit; }
+  /* SVG text sizes are in rem too; the script measures the rendered text,
+     so bar geometry adapts to whatever size these resolve to. */
+  .name { fill: var(--ink); font-size: 0.8125rem; }                         /* city labels */
+  .val { fill: var(--ink-2); font-size: 0.75rem; font-variant-numeric: tabular-nums; } /* value at bar end */
+  .tick { fill: var(--muted); font-size: 0.6875rem; font-variant-numeric: tabular-nums; } /* axis ticks */
+  .empty { fill: var(--ink-2); font-size: 0.875rem; }                       /* "No data" */
+  /* Grid and zero lines stay 1px (hairlines); crispEdges stops blurring. */
+  .grid { stroke: var(--grid); stroke-width: 1; shape-rendering: crispEdges; }
+  .zero { stroke: var(--zero); stroke-width: 1; shape-rendering: crispEdges; }
+  .bar-pos { fill: var(--pos); }
+  .bar-neg { fill: var(--neg); }
+  /* .hit is a full-width invisible rect per row so hover works anywhere on
+     the row, not only on the (possibly thin) bar. */
+  .hit { fill: transparent; }
+  .row:hover .hit { fill: var(--hover); }
+  .row:hover .bar-pos, .row:hover .bar-neg { opacity: 0.82; }
+
+  /* Tooltip: all measures for one city, current measure in bold.
+     pointer-events: none so it never steals the hover from the row under it. */
+  .tip {
+    position: absolute;
+    pointer-events: none;
+    min-width: 12rem;
+    background: var(--surface);
+    color: var(--ink);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.12);
+    padding: 0.5rem 0.625rem;
+    font-size: 0.75rem;
+  }
+  .tip[hidden] { display: none; }
+  .tip-head { color: var(--ink-2); margin-bottom: 0.25rem; }
+  .tip-head b { color: var(--ink); font-weight: 600; }
+  .tip-row { display: flex; justify-content: space-between; gap: 1rem; font-variant-numeric: tabular-nums; }
+  .tip-row span:first-child { color: var(--ink-2); }
+  .tip-row.on span { color: var(--ink); font-weight: 600; }
+
+  /* Colour key; shown only when the chart has negative bars. */
+  .key { display: flex; gap: 1rem; color: var(--ink-2); font-size: 0.75rem; margin-top: 0.5rem; }
+  .key[hidden] { display: none; }
+  .sw { display: inline-block; width: 0.625rem; height: 0.625rem; border-radius: 0.125rem; margin-right: 0.375rem; vertical-align: -0.0625rem; }
+
+  /* "Show all 50" / "Show top 25", directly under the bars it extends. */
+  .more { margin-top: 0.75rem; }
+  .more button[hidden] { display: none; }
+
+  /* ---- Controls (beneath the chart) ------------------------------------
+     Each group is a label plus a wrapping row of chips. On phones the label
+     sits above its chips, so wrapped chips line up at the left edge instead
+     of under the label. Wider screens put the label in its own column. */
+  .controls {
+    display: flex; flex-direction: column; gap: 0.875rem;
+    margin-top: 1rem; padding-top: 0.875rem; border-top: 1px solid var(--grid);
+  }
+  .control { display: grid; grid-template-columns: 1fr; gap: 0.375rem; }
+  .control-label { color: var(--ink-2); font-size: 0.8125rem; }
+  .chips { display: flex; flex-wrap: wrap; gap: 0.375rem; }
+  @media (min-width: 40rem) {
+    .control { grid-template-columns: 4.5rem 1fr; align-items: center; }
+  }
+
+  /* ---- Totals line ----------------------------------------------------- */
+  .totals { color: var(--ink-2); font-size: 0.8125rem; margin: 0.875rem 0 0; padding-top: 0.625rem; border-top: 1px solid var(--grid); font-variant-numeric: tabular-nums; }
+
+  /* ---- Actions: table toggle, CSV download, row count ------------------ */
+  .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-top: 0.875rem; }
+  .actions .spacer { flex: 1; }   /* pushes the row count to the right */
+  .actions .meta { font-variant-numeric: tabular-nums; }
+
+  /* ---- Data table ------------------------------------------------------
+     Scrolls sideways inside its own box on phones instead of widening the
+     page. */
+  .table-wrap { margin-top: 0.75rem; overflow-x: auto; border: 1px solid var(--border); border-radius: 0.5rem; }
+  .table-wrap[hidden] { display: none; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.8125rem; }
+  th, td { padding: 0.375rem 0.625rem; text-align: left; white-space: nowrap; border-bottom: 1px solid var(--grid); }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  thead th { background: var(--btn); position: sticky; top: 0; }
+  /* Column headers are buttons (click to sort); strip the chip styling.
+     min-height: 0 undoes the touch-target rule so header rows stay compact. */
+  th button { background: none; border: 0; border-radius: 0.25rem; padding: 0; min-height: 0; font-weight: 600; color: var(--ink); }
+  th button:hover { text-decoration: underline; }
+  th .arrow { display: inline-block; width: 1em; color: var(--ink-2); }  /* ▲ / ▼ sort marker */
+  tbody tr:last-child td { border-bottom: 0; }
+  tbody tr:hover td { background: var(--hover); }
+
+  /* ---- Narrow screens (phones in portrait) -----------------------------
+     Trim side padding so the chart gets more of the screen width. */
+  @media (max-width: 40rem) {
+    main { padding: 1.25rem 0.625rem 2.5rem; }
+    .card { padding: 1rem 0.875rem 0.875rem; }
+  }
+
+  /* ---- Print -----------------------------------------------------------
+     Hide interactive parts; always print the full table. */
+  @media print {
+    body { background: #fff; }
+    .controls, .more, .actions button, .tip { display: none !important; }
+    .table-wrap { display: block !important; overflow: visible; }
+    .card { border: 0; padding: 0; }
+    thead th { position: static; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <!-- Header: filled from the payload (title, refresh time, source note). -->
+  <header>
+    <div class="title-row">
+      <h1 id="title"></h1>
+      <div class="meta">Refreshed: <span id="refreshed"></span></div>
+    </div>
+    <div class="meta" id="source"></div>
+  </header>
+
+  <section class="card">
+    <!-- Chart title and subtitle change with the region and measure. -->
+    <h2 id="chart-title"></h2>
+    <p class="sub" id="chart-sub"></p>
+
+    <!-- Bar chart. The script draws the SVG; the tooltip floats over it. -->
+    <div class="chart" id="chart">
+      <svg id="svg" role="img" aria-label="Bar chart"></svg>
+      <div class="tip" id="tip" hidden></div>
+    </div>
+
+    <!-- Colour key; only shown when some bars are negative. -->
+    <div class="key" id="key" hidden>
+      <span><span class="sw" style="background:var(--pos)"></span>Growth</span>
+      <span><span class="sw" style="background:var(--neg)"></span>Decline</span>
+    </div>
+
+    <!-- Expand / collapse the chart; hidden when all rows already fit. -->
+    <div class="more">
+      <button type="button" id="toggle-all" aria-pressed="false"></button>
+    </div>
+
+    <!-- Controls, placed beneath the chart so the chart is the first thing
+         a phone reader sees. The script builds the chips from the data. -->
+    <div class="controls">
+      <div class="control" role="group" aria-labelledby="measure-label">
+        <span class="control-label" id="measure-label">Sort by</span>
+        <div id="measure-buttons" class="chips"></div>
+      </div>
+      <div class="control" role="group" aria-labelledby="region-label">
+        <span class="control-label" id="region-label">Region</span>
+        <div id="region-buttons" class="chips"></div>
+      </div>
+    </div>
+
+    <!-- One-line summary of the current region. -->
+    <p class="totals" id="totals"></p>
+
+    <!-- Secondary actions: show the raw table, download it, row count. -->
+    <div class="actions">
+      <button type="button" id="toggle-table" aria-expanded="false" aria-controls="table-wrap">Show data ▾</button>
+      <button type="button" id="download">Download CSV</button>
+      <span class="spacer"></span>
+      <span class="meta" id="count"></span>
+    </div>
+
+    <!-- Sortable data table, collapsed by default. -->
+    <div class="table-wrap" id="table-wrap" hidden>
+      <table>
+        <thead><tr id="thead-row"></tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<!-- Data payload, injected by build_html.py. type="application/json" means
+     the browser stores it as text and never runs it. -->
+<script type="application/json" id="data">{"title": "World's Wealthiest Cities", "source": "Source: wealth_cities_2025.csv", "refreshed_utc": "2026-09-30 18:40 UTC", "rows": [{"RANK_NO": 1, "CITY": "New York City", "COUNTRY": "United States", "REGION": "North America", "MILLIONAIRES": 384500, "CENTI_MILLIONAIRES": 818, "BILLIONAIRES": 66, "WEALTH_GROWTH_PCT": 45.0, "POPULATION": 8500000, "SOURCE_YEAR": 2025}, {"RANK_NO": 2, "CITY": "The Bay Area", "COUNTRY": "United States", "REGION": "North America", "MILLIONAIRES": 342400, "CENTI_MILLIONAIRES": 756, "BILLIONAIRES": 82, "WEALTH_GROWTH_PCT": 98.0, "POPULATION": 7600000, "SOURCE_YEAR": 2025}, {"RANK_NO": 3, "CITY": "Tokyo", "COUNTRY": "Japan", "REGION": "Asia", "MILLIONAIRES": 292300, "CENTI_MILLIONAIRES": 262, "BILLIONAIRES": 18, "WEALTH_GROWTH_PCT": 4.0, "POPULATION": 37000000, "SOURCE_YEAR": 2025}, {"RANK_NO": 4, "CITY": "Singapore", "COUNTRY": "Singapore", "REGION": "Asia", "MILLIONAIRES": 242400, "CENTI_MILLIONAIRES": 333, "BILLIONAIRES": 30, "WEALTH_GROWTH_PCT": 62.0, "POPULATION": 6000000, "SOURCE_YEAR": 2025}, {"RANK_NO": 5, "CITY": "Los Angeles", "COUNTRY": "United States", "REGION": "North America", "MILLIONAIRES": 220600, "CENTI_MILLIONAIRES": 516, "BILLIONAIRES": 45, "WEALTH_GROWTH_PCT": 35.0, "POPULATION": 3900000, "SOURCE_YEAR": 2025}, {"RANK_NO": 6, "CITY": "London", "COUNTRY": "United Kingdom", "REGION": "Europe", "MILLIONAIRES": 215700, "CENTI_MILLIONAIRES": 352, "BILLIONAIRES": 33, "WEALTH_GROWTH_PCT": -12.0, "POPULATION": 9800000, "SOURCE_YEAR": 2025}, {"RANK_NO": 7, "CITY": "Paris", "COUNTRY": "France", "REGION": "Europe", "MILLIONAIRES": 160100, "CENTI_MILLIONAIRES": 277, "BILLIONAIRES": 22, "WEALTH_GROWTH_PCT": 5.0, "POPULATION": 11300000, "SOURCE_YEAR": 2025}, {"RANK_NO": 8, "CITY": "Hong Kong", "COUNTRY": "Hong Kong", "REGION": "Asia", "MILLIONAIRES": 154900, "CENTI_MILLIONAIRES": 346, "BILLIONAIRES": 40, "WEALTH_GROWTH_PCT": 3.0, "POPULATION": 7500000, "SOURCE_YEAR": 2025}, {"RANK_NO": 9, "CITY": "Sydney", "COUNTRY": "Australia", "REGION": "Oceania", "MILLIONAIRES": 152900, "CENTI_MILLIONAIRES": 224, "BILLIONAIRES": 22, "WEALTH_GROWTH_PCT": 28.0, "POPULATION": 5200000, "SOURCE_YEAR": 2025}, {"RANK_NO": 10, "CITY": "Chicago", "COUNTRY": "United States", "REGION": "North America", "MILLIONAIRES": 127100, "CENTI_MILLIONAIRES": 295, "BILLIONAIRES": 25, "WEALTH_GROWTH_PCT": 24.0, "POPULATION": 2700000, "SOURCE_YEAR": 2025}, {"RANK_NO": 11, "CITY": "Milan", "COUNTRY": "Italy", "REGION": "Europe", "MILLIONAIRES": 115000, "CENTI_MILLIONAIRES": 182, "BILLIONAIRES": 17, "WEALTH_GROWTH_PCT": 24.0, "POPULATION": 3200000, "SOURCE_YEAR": 2025}, {"RANK_NO": 12, "CITY": "Beijing", "COUNTRY": "China", "REGION": "Asia", "MILLIONAIRES": 114300, "CENTI_MILLIONAIRES": 316, "BILLIONAIRES": 38, "WEALTH_GROWTH_PCT": 72.0, "POPULATION": 22600000, "SOURCE_YEAR": 2025}, {"RANK_NO": 13, "CITY": "Osaka-Kyoto-Kobe", "COUNTRY": "Japan", "REGION": "Asia", "MILLIONAIRES": 112200, "CENTI_MILLIONAIRES": 128, "BILLIONAIRES": 12, "WEALTH_GROWTH_PCT": 20.0, "POPULATION": 5500000, "SOURCE_YEAR": 2025}, {"RANK_NO": 14, "CITY": "Shanghai", "COUNTRY": "China", "REGION": "Asia", "MILLIONAIRES": 110500, "CENTI_MILLIONAIRES": 293, "BILLIONAIRES": 35, "WEALTH_GROWTH_PCT": 67.0, "POPULATION": 30500000, "SOURCE_YEAR": 2025}, {"RANK_NO": 15, "CITY": "Toronto", "COUNTRY": "Canada", "REGION": "North America", "MILLIONAIRES": 108400, "CENTI_MILLIONAIRES": 184, "BILLIONAIRES": 20, "WEALTH_GROWTH_PCT": 18.0, "POPULATION": 2800000, "SOURCE_YEAR": 2025}, {"RANK_NO": 16, "CITY": "Melbourne", "COUNTRY": "Australia", "REGION": "Oceania", "MILLIONAIRES": 94000, "CENTI_MILLIONAIRES": 108, "BILLIONAIRES": 12, "WEALTH_GROWTH_PCT": 36.0, "POPULATION": 5400000, "SOURCE_YEAR": 2025}, {"RANK_NO": 17, "CITY": "Houston", "COUNTRY": "United States", "REGION": "North America", "MILLIONAIRES": 81800, "CENTI_MILLIONAIRES": 210, "BILLIONAIRES": 16, "WEALTH_GROWTH_PCT": 75.0, "POPULATION": 2300000, "SOURCE_YEAR": 2025}, {"RANK_NO": 18, "CITY": "Dubai", "COUNTRY": "United Arab Emirates", "REGION": "Middle East", "MILLIONAIRES": 81200, "CENTI_MILLIONAIRES": 237, "BILLIONAIRES": 20, "WEALTH_GROWTH_PCT": 102.0, "POPULATION": 3100000, "SOURCE_YEAR": 2025}, {"RANK_NO": 19, "CITY": "Frankfurt", "COUNTRY": "Germany", "REGION": "Europe", "MILLIONAIRES": 80300, "CENTI_MILLIONAIRES": 132, "BILLIONAIRES": 13, "WEALTH_GROWTH_PCT": 9.0, "POPULATION": 804000, "SOURCE_YEAR": 2025}, {"RANK_NO": 20, "CITY": "Zurich", "COUNTRY": "Switzerland", "REGION": "Europe", "MILLIONAIRES": 77800, "CENTI_MILLIONAIRES": 180, "BILLIONAIRES": 10, "WEALTH_GROWTH_PCT": 10.0, "POPULATION": 1450000, "SOURCE_YEAR": 2025}, {"RANK_NO": 21, "CITY": "Dallas", "COUNTRY": "United States", "REGION": "North America", "MILLIONAIRES": 72400, "CENTI_MILLIONAIRES": 135, "BILLIONAIRES": 16, "WEALTH_GROWTH_PCT": 85.0, "POPULATION": 1300000, "SOURCE_YEAR": 2025}, {"RANK_NO": 22, "CITY": "Geneva", "COUNTRY": "Switzerland", "REGION": "Europe", "MILLIONAIRES": 70200, "CENTI_MILLIONAIRES": 215, "BILLIONAIRES": 14, "WEALTH_GROWTH_PCT": 26.0, "POPULATION": 645000, "SOURCE_YEAR": 2025}, {"RANK_NO": 23, "CITY": "Munich", "COUNTRY": "Germany", "REGION": "Europe", "MILLIONAIRES": 69800, "CENTI_MILLIONAIRES": 87, "BILLIONAIRES": 11, "WEALTH_GROWTH_PCT": 17.0, "POPULATION": 1500000, "SOURCE_YEAR": 2025}, {"RANK_NO": 24, "CITY": "Seoul", "COUNTRY": "South Korea", "REGION": "Asia", "MILLIONAIRES": 66000, "CENTI_MILLIONAIRES": 148, "BILLIONAIRES": 16, "WEALTH_GROWTH_PCT": 17.0, "POPULATION": 10000000, "SOURCE_YEAR": 2025}, {"RANK_NO": 25, "CITY": "Seattle", "COUNTRY": "United States", "REGION": "North America", "MILLIONAIRES": 53100, "CENTI_MILLIONAIRES": 127, "BILLIONAIRES": 11, "WEALTH_GROWTH_PCT": 48.0, "POPULATION": 764000, "SOURCE_YEAR": 2025}, {"RANK_NO": 26, "CITY": "Rome", "COUNTRY": "Italy", "REGION": "Europe", "MILLIONAIRES": 51800, "CENTI_MILLIONAIRES": 83, "BILLIONAIRES": 9, "WEALTH_GROWTH_PCT": 9.0, "POPULATION": 4350000, "SOURCE_YEAR": 2025}, {"RANK_NO": 27, "CITY": "Mumbai", "COUNTRY": "India", "REGION": "Asia", "MILLIONAIRES": 51200, "CENTI_MILLIONAIRES": 205, "BILLIONAIRES": 25, "WEALTH_GROWTH_PCT": 69.0, "POPULATION": 22100000, "SOURCE_YEAR": 2025}, {"RANK_NO": 28, "CITY": "Shenzhen", "COUNTRY": "China", "REGION": "Asia", "MILLIONAIRES": 50800, "CENTI_MILLIONAIRES": 156, "BILLIONAIRES": 22, "WEALTH_GROWTH_PCT": 142.0, "POPULATION": 13500000, "SOURCE_YEAR": 2025}, {"RANK_NO": 29, "CITY": "Vancouver", "COUNTRY": "Canada", "REGION": "North America", "MILLIONAIRES": 46400, "CENTI_MILLIONAIRES": 90, "BILLIONAIRES": 11, "WEALTH_GROWTH_PCT": 52.0, "POPULATION": 662000, "SOURCE_YEAR": 2025}, {"RANK_NO": 30, "CITY": "Amsterdam", "COUNTRY": "Netherlands", "REGION": "Europe", "MILLIONAIRES": 46100, "CENTI_MILLIONAIRES": 93, "BILLIONAIRES": 9, "WEALTH_GROWTH_PCT": 32.0, "POPULATION": 1200000, "SOURCE_YEAR": 2025}, {"RANK_NO": 31, "CITY": "Boston", "COUNTRY": "United States", "REGION": "North America", "MILLIONAIRES": 45000, "CENTI_MILLIONAIRES": 112, "BILLIONAIRES": 8, "WEALTH_GROWTH_PCT": 40.0, "POPULATION": 639000, "SOURCE_YEAR": 2025}, {"RANK_NO": 32, "CITY": "Miami", "COUNTRY": "United States", "REGION": "North America", "MILLIONAIRES": 38800, "CENTI_MILLIONAIRES": 180, "BILLIONAIRES": 17, "WEALTH_GROWTH_PCT": 94.0, "POPULATION": 465000, "SOURCE_YEAR": 2025}, {"RANK_NO": 33, "CITY": "Madrid", "COUNTRY": "Spain", "REGION": "Europe", "MILLIONAIRES": 34900, "CENTI_MILLIONAIRES": 72, "BILLIONAIRES": 8, "WEALTH_GROWTH_PCT": 5.0, "POPULATION": 6800000, "SOURCE_YEAR": 2025}, {"RANK_NO": 34, "CITY": "Perth", "COUNTRY": "Australia", "REGION": "Oceania", "MILLIONAIRES": 34600, "CENTI_MILLIONAIRES": 66, "BILLIONAIRES": 9, "WEALTH_GROWTH_PCT": 32.0, "POPULATION": 2200000, "SOURCE_YEAR": 2025}, {"RANK_NO": 35, "CITY": "Hangzhou", "COUNTRY": "China", "REGION": "Asia", "MILLIONAIRES": 32200, "CENTI_MILLIONAIRES": 104, "BILLIONAIRES": 12, "WEALTH_GROWTH_PCT": 108.0, "POPULATION": 8600000, "SOURCE_YEAR": 2025}, {"RANK_NO": 36, "CITY": "Austin", "COUNTRY": "United States", "REGION": "North America", "MILLIONAIRES": 32000, "CENTI_MILLIONAIRES": 90, "BILLIONAIRES": 10, "WEALTH_GROWTH_PCT": 90.0, "POPULATION": 989000, "SOURCE_YEAR": 2025}, {"RANK_NO": 37, "CITY": "Vienna", "COUNTRY": "Austria", "REGION": "Europe", "MILLIONAIRES": 31500, "CENTI_MILLIONAIRES": 74, "BILLIONAIRES": 7, "WEALTH_GROWTH_PCT": 20.0, "POPULATION": 2000000, "SOURCE_YEAR": 2025}, {"RANK_NO": 38, "CITY": "Taipei City", "COUNTRY": "Taiwan", "REGION": "Asia", "MILLIONAIRES": 31400, "CENTI_MILLIONAIRES": 85, "BILLIONAIRES": 16, "WEALTH_GROWTH_PCT": 60.0, "POPULATION": 2800000, "SOURCE_YEAR": 2025}, {"RANK_NO": 39, "CITY": "Delhi", "COUNTRY": "India", "REGION": "Asia", "MILLIONAIRES": 31200, "CENTI_MILLIONAIRES": 125, "BILLIONAIRES": 16, "WEALTH_GROWTH_PCT": 82.0, "POPULATION": 34700000, "SOURCE_YEAR": 2025}, {"RANK_NO": 40, "CITY": "Moscow", "COUNTRY": "Russia", "REGION": "Europe", "MILLIONAIRES": 30000, "CENTI_MILLIONAIRES": 178, "BILLIONAIRES": 23, "WEALTH_GROWTH_PCT": -25.0, "POPULATION": 12700000, "SOURCE_YEAR": 2025}, {"RANK_NO": 41, "CITY": "Washington, D.C.", "COUNTRY": "United States", "REGION": "North America", "MILLIONAIRES": 28900, "CENTI_MILLIONAIRES": 97, "BILLIONAIRES": 12, "WEALTH_GROWTH_PCT": 92.0, "POPULATION": 684000, "SOURCE_YEAR": 2025}, {"RANK_NO": 42, "CITY": "Berlin", "COUNTRY": "Germany", "REGION": "Europe", "MILLIONAIRES": 28400, "CENTI_MILLIONAIRES": 50, "BILLIONAIRES": 5, "WEALTH_GROWTH_PCT": 25.0, "POPULATION": 3600000, "SOURCE_YEAR": 2025}, {"RANK_NO": 43, "CITY": "Brisbane", "COUNTRY": "Australia", "REGION": "Oceania", "MILLIONAIRES": 26400, "CENTI_MILLIONAIRES": 39, "BILLIONAIRES": 4, "WEALTH_GROWTH_PCT": 22.0, "POPULATION": 2600000, "SOURCE_YEAR": 2025}, {"RANK_NO": 44, "CITY": "Nice to Èze", "COUNTRY": "France", "REGION": "Europe", "MILLIONAIRES": 25500, "CENTI_MILLIONAIRES": 92, "BILLIONAIRES": 9, "WEALTH_GROWTH_PCT": 18.0, "POPULATION": 343000, "SOURCE_YEAR": 2025}, {"RANK_NO": 45, "CITY": "Guangzhou", "COUNTRY": "China", "REGION": "Asia", "MILLIONAIRES": 24300, "CENTI_MILLIONAIRES": 69, "BILLIONAIRES": 9, "WEALTH_GROWTH_PCT": 88.0, "POPULATION": 14900000, "SOURCE_YEAR": 2025}, {"RANK_NO": 46, "CITY": "Manchester & Trafford", "COUNTRY": "United Kingdom", "REGION": "Europe", "MILLIONAIRES": 23400, "CENTI_MILLIONAIRES": 68, "BILLIONAIRES": 7, "WEALTH_GROWTH_PCT": 7.0, "POPULATION": 2800000, "SOURCE_YEAR": 2025}, {"RANK_NO": 47, "CITY": "Stockholm", "COUNTRY": "Sweden", "REGION": "Europe", "MILLIONAIRES": 23100, "CENTI_MILLIONAIRES": 60, "BILLIONAIRES": 11, "WEALTH_GROWTH_PCT": 2.0, "POPULATION": 1700000, "SOURCE_YEAR": 2025}, {"RANK_NO": 48, "CITY": "Tel Aviv & Herzliya", "COUNTRY": "Israel", "REGION": "Middle East", "MILLIONAIRES": 22600, "CENTI_MILLIONAIRES": 76, "BILLIONAIRES": 9, "WEALTH_GROWTH_PCT": 25.0, "POPULATION": 4600000, "SOURCE_YEAR": 2025}, {"RANK_NO": 49, "CITY": "Dublin", "COUNTRY": "Ireland", "REGION": "Europe", "MILLIONAIRES": 22300, "CENTI_MILLIONAIRES": 43, "BILLIONAIRES": 5, "WEALTH_GROWTH_PCT": 34.0, "POPULATION": 1300000, "SOURCE_YEAR": 2025}, {"RANK_NO": 50, "CITY": "Lisbon", "COUNTRY": "Portugal", "REGION": "Europe", "MILLIONAIRES": 22200, "CENTI_MILLIONAIRES": 45, "BILLIONAIRES": 4, "WEALTH_GROWTH_PCT": 40.0, "POPULATION": 3000000, "SOURCE_YEAR": 2025}]}</script>
+<script>
+(function () {
+  'use strict';
+
+  // ---- config -----------------------------------------------------------
+  // How many bars to show before "Show all".
+  const TOP_N = 25;
+
+  // Every column in the payload, in table / CSV order. `type` drives parsing,
+  // formatting, alignment, and default sort direction.
+  const COLS = [
+    { key: 'RANK_NO', label: 'Rank', type: 'int' },
+    { key: 'CITY', label: 'City', type: 'text' },
+    { key: 'COUNTRY', label: 'Country', type: 'text' },
+    { key: 'REGION', label: 'Region', type: 'text' },
+    { key: 'MILLIONAIRES', label: 'Millionaires', type: 'int' },
+    { key: 'CENTI_MILLIONAIRES', label: 'Centi-millionaires', type: 'int' },
+    { key: 'BILLIONAIRES', label: 'Billionaires', type: 'int' },
+    { key: 'WEALTH_GROWTH_PCT', label: 'Wealth growth %', type: 'pct' },
+    { key: 'POPULATION', label: 'Population', type: 'int' },
+    { key: 'SOURCE_YEAR', label: 'Year', type: 'year' }
+  ];
+  // Columns the chart can plot (the "Sort by" chips). `compact` shortens
+  // large bar labels, e.g. 37,000,000 -> 37M.
+  const MEASURES = [
+    { key: 'MILLIONAIRES', label: 'Millionaires' },
+    { key: 'CENTI_MILLIONAIRES', label: 'Centi-millionaires' },
+    { key: 'BILLIONAIRES', label: 'Billionaires' },
+    { key: 'WEALTH_GROWTH_PCT', label: 'Wealth growth' },
+    { key: 'POPULATION', label: 'Population', compact: true }
+  ];
+  const colByKey = Object.fromEntries(COLS.map(c => [c.key, c]));
+
+  // ---- data -------------------------------------------------------------
+  const payload = JSON.parse(document.getElementById('data').textContent);
+
+  // Snowflake may send NUMBER columns as strings (Decimal -> str), so coerce here.
+  // Blank or non-numeric values become null and show as a dash.
+  function toNum(v) {
+    if (v === null || v === undefined || v === '') return null;
+    const n = Number(v);
+    return Number.isFinite(n) ? n : null;
+  }
+  // Normalise each row to exactly the COLS keys, with clean types.
+  const rows = (payload.rows || []).map(r => {
+    const o = {};
+    COLS.forEach(c => {
+      const v = r[c.key];
+      o[c.key] = c.type === 'text' ? (v === null || v === undefined ? null : String(v)) : toNum(v);
+    });
+    return o;
+  });
+
+  // Distinct regions in first-seen order (the data arrives ranked, so the
+  // region with the top city comes first).
+  const regions = [];
+  rows.forEach(r => { if (r.REGION !== null && !regions.includes(r.REGION)) regions.push(r.REGION); });
+
+  // All UI state in one place. Every control changes state, then calls render().
+  const state = {
+    region: 'All',          // region filter, or 'All'
+    measure: 'MILLIONAIRES', // column the chart plots
+    showAll: false,         // false = top TOP_N bars only
+    tableOpen: false,       // data table expanded?
+    sortKey: 'RANK_NO',     // table sort column
+    sortDir: 1              // 1 = ascending, -1 = descending
+  };
+
+  // ---- formatting -------------------------------------------------------
+  const nfInt = new Intl.NumberFormat('en-US', { maximumFractionDigits: 0 });
+  const nfCompact = new Intl.NumberFormat('en-US', { notation: 'compact', maximumFractionDigits: 1 });
+  const DASH = '–';  // shown for missing values
+  const MINUS = '−'; // true minus sign; lines up with "+" in tabular figures
+
+  // Signed percent: +45.0%, −12.0%, 0.0%.
+  function fmtPct(v, digits) {
+    const s = Math.abs(v).toFixed(digits) + '%';
+    return v > 0 ? '+' + s : v < 0 ? MINUS + s : s;
+  }
+  // Format one value for display according to its column type.
+  function fmt(type, v, compact) {
+    if (v === null || v === undefined) return DASH;
+    if (type === 'pct') return fmtPct(v, 1);
+    if (type === 'year') return String(v);   // no thousands separator: 2025, not 2,025
+    if (type === 'text') return v;
+    return compact ? nfCompact.format(v) : nfInt.format(v);
+  }
+  // Axis tick labels: shorter than bar labels (no sign on positives, compact
+  // from 10,000 up).
+  function fmtTick(type, v) {
+    if (type === 'pct') return (v < 0 ? MINUS : '') + Math.abs(v) + '%';
+    return Math.abs(v) >= 10000 ? nfCompact.format(v) : nfInt.format(v);
+  }
+
+  // ---- helpers ----------------------------------------------------------
+  const svg = document.getElementById('svg');
+  const NS = svg.namespaceURI;
+  const $ = id => document.getElementById(id);
+
+  // Current root font size in px, i.e. what 1rem resolves to. The SVG is
+  // drawn in px, so chart spacing is written in rem and multiplied by this.
+  // Read fresh on every draw, so a font-size change takes effect on redraw.
+  function remPx() {
+    return parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+  }
+
+  // Create an SVG element with attributes and optional text.
+  function el(name, attrs, text) {
+    const e = document.createElementNS(NS, name);
+    for (const k in attrs) e.setAttribute(k, attrs[k]);
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+  // Null handling for sorts. Returns non-zero only when a null is involved;
+  // callers fall through to their own comparison when it returns 0.
+  function cmp(a, b) {
+    // nulls always last, whatever the direction
+    if (a === null && b === null) return 0;
+    if (a === null) return 1;
+    if (b === null) return -1;
+    return 0;
+  }
+  // Rows for the selected region.
+  function filtered() {
+    return state.region === 'All' ? rows : rows.filter(r => r.REGION === state.region);
+  }
+  // Pick a round tick step (1, 2, 5 × 10^n) giving about `count` ticks.
+  function niceStep(span, count) {
+    const raw = span / Math.max(1, count);
+    const mag = Math.pow(10, Math.floor(Math.log10(raw)));
+    const norm = raw / mag;
+    return (norm < 1.5 ? 1 : norm < 3 ? 2 : norm < 7 ? 5 : 10) * mag;
+  }
+  // SVG path for a horizontal bar from x0 to x1, rounded only at the far
+  // end (the end away from the zero line). Handles bars going left too.
+  function barPath(x0, x1, y, h, r) {
+    const w = Math.abs(x1 - x0);
+    r = Math.min(r, w, h / 2);
+    if (x1 >= x0) {
+      return `M${x0},${y}H${x1 - r}A${r},${r} 0 0 1 ${x1},${y + r}V${y + h - r}` +
+             `A${r},${r} 0 0 1 ${x1 - r},${y + h}H${x0}Z`;
+    }
+    return `M${x0},${y}H${x1 + r}A${r},${r} 0 0 0 ${x1},${y + r}V${y + h - r}` +
+           `A${r},${r} 0 0 0 ${x1 + r},${y + h}H${x0}Z`;
+  }
+  // Widest rendered width of `strings` in CSS class `cls`. Measures real
+  // text, so label columns fit the actual font and size in use.
+  function textWidth(strings, cls) {
+    const t = el('text', { class: cls, x: -9999, y: -9999 });
+    svg.appendChild(t);
+    let max = 0;
+    strings.forEach(s => { t.textContent = s; max = Math.max(max, t.getComputedTextLength()); });
+    svg.removeChild(t);
+    return max;
+  }
+
+  // Run a state change, then scroll so `btn` stays where it was on screen.
+  // The controls sit under the chart, so a change that shrinks or grows the
+  // chart (e.g. picking a region with 2 cities) would otherwise move the
+  // chips out from under the reader's finger.
+  function keepInPlace(btn, change) {
+    const before = btn.getBoundingClientRect().top;
+    change();
+    render();
+    if (btn.hidden || !btn.isConnected) return;  // nothing to anchor to
+    const shift = btn.getBoundingClientRect().top - before;
+    if (shift) window.scrollBy(0, shift);
+  }
+
+  // ---- buttons ----------------------------------------------------------
+  // Build one chip. `count`, if given, shows as a dim number after the label.
+  function makeButton(label, count, onClick) {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.setAttribute('aria-pressed', 'false');
+    b.appendChild(document.createTextNode(label));
+    if (count !== undefined) {
+      const n = document.createElement('span');
+      n.className = 'n';
+      n.textContent = count;
+      b.appendChild(n);
+    }
+    b.addEventListener('click', () => onClick(b));
+    return b;
+  }
+
+  // Region chips: "All" first, then each region with its city count.
+  const regionButtons = {};
+  [['All', rows.length]].concat(regions.map(g => [g, rows.filter(r => r.REGION === g).length]))
+    .forEach(([g, n]) => {
+      regionButtons[g] = makeButton(g, n, b => keepInPlace(b, () => { state.region = g; }));
+      $('region-buttons').appendChild(regionButtons[g]);
+    });
+
+  // Measure chips: pick which column the chart plots.
+  const measureButtons = {};
+  MEASURES.forEach(m => {
+    measureButtons[m.key] = makeButton(m.label, undefined, b => keepInPlace(b, () => { state.measure = m.key; }));
+    $('measure-buttons').appendChild(measureButtons[m.key]);
+  });
+
+  // Fixed buttons. "Show all" changes chart height the most, so it also
+  // keeps itself in place.
+  $('toggle-all').addEventListener('click', e =>
+    keepInPlace(e.currentTarget, () => { state.showAll = !state.showAll; }));
+  $('toggle-table').addEventListener('click', () => { state.tableOpen = !state.tableOpen; render(); });
+  $('download').addEventListener('click', downloadCsv);
+
+  // ---- chart ------------------------------------------------------------
+  const tip = $('tip');
+  const chartBox = $('chart');
+
+  // Fill and place the tooltip for row `r` next to the pointer. Lists every
+  // measure, with the one being plotted in bold.
+  function showTip(evt, r) {
+    const m = state.measure;
+    tip.textContent = '';
+    const head = document.createElement('div');
+    head.className = 'tip-head';
+    const b = document.createElement('b');
+    b.textContent = r.CITY === null ? DASH : r.CITY;
+    head.appendChild(b);
+    head.appendChild(document.createTextNode(` · ${r.COUNTRY ?? DASH} · rank ${fmt('int', r.RANK_NO)}`));
+    tip.appendChild(head);
+    MEASURES.forEach(ms => {
+      const row = document.createElement('div');
+      row.className = 'tip-row' + (ms.key === m ? ' on' : '');
+      const a = document.createElement('span');
+      a.textContent = ms.label;
+      const v = document.createElement('span');
+      v.textContent = fmt(colByKey[ms.key].type, r[ms.key]);
+      row.appendChild(a);
+      row.appendChild(v);
+      tip.appendChild(row);
+    });
+    tip.hidden = false;
+    // Offset from the pointer by 0.875rem; flip to the left side if the tip
+    // would run off the right edge of the chart.
+    const gap = 0.875 * remPx();
+    const box = chartBox.getBoundingClientRect();
+    let x = evt.clientX - box.left + gap;
+    let y = evt.clientY - box.top + gap;
+    if (x + tip.offsetWidth > box.width) x = evt.clientX - box.left - tip.offsetWidth - gap;
+    tip.style.left = Math.max(0, x) + 'px';
+    tip.style.top = y + 'px';
+  }
+  function hideTip() { tip.hidden = true; }
+
+  // Draw the bar chart for rows `f`: sort by the selected measure, largest
+  // first, then lay out axis, grid, bars, and labels.
+  function drawChart(f) {
+    const m = MEASURES.find(x => x.key === state.measure);
+    const type = colByKey[m.key].type;
+    // Largest first; nulls last; ties broken by original rank.
+    const sorted = f.slice().sort((a, b) =>
+      cmp(a[m.key], b[m.key]) || (b[m.key] - a[m.key]) || (a.RANK_NO - b.RANK_NO));
+    const shown = state.showAll ? sorted : sorted.slice(0, TOP_N);
+
+    // Titles describe exactly what is on screen.
+    $('chart-title').textContent = `${m.label} by city` + (state.region === 'All' ? '' : ` — ${state.region}`);
+    $('chart-sub').textContent = sorted.length === 0 ? '' :
+      (shown.length < sorted.length ? `Top ${shown.length} of ${sorted.length} cities` : `${sorted.length} ${sorted.length === 1 ? 'city' : 'cities'}`) +
+      ', largest first' + (type === 'pct' ? '. Wealth growth is the percentage change in millionaires.' : '');
+
+    // "Show all / top N" only makes sense when there are more than TOP_N rows.
+    const toggle = $('toggle-all');
+    toggle.hidden = sorted.length <= TOP_N;
+    toggle.textContent = state.showAll ? `Show top ${TOP_N}` : `Show all ${sorted.length}`;
+    toggle.setAttribute('aria-pressed', String(state.showAll));
+
+    // Chart spacing, in rem, converted to px for the SVG.
+    const rem = remPx();
+    const TOP = 1.375 * rem;   // space above the first row for tick labels
+    const ROW = 1.75 * rem;    // height of one row
+    const BAR = 1.125 * rem;   // bar thickness within a row
+    const RADIUS = 0.25 * rem; // corner radius at the bar end
+    const TICK_GAP = 5.625 * rem; // aim for one tick per this much width
+    const LABEL_PAD = 0.75 * rem; // gap between city label and the plot
+    const VALUE_PAD = 0.375 * rem; // gap between bar end and its value
+
+    // Clear and size the SVG. Width = chart box width, so 1 SVG unit = 1 CSS px
+    // and the rem-sized CSS text renders at its true size.
+    hideTip();
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    // Use the real box width, never a larger minimum: a viewBox wider than
+    // the box would shrink all chart text and leave empty bands above and
+    // below. The fallback only applies if the box has no width yet.
+    const W = chartBox.clientWidth || 17.5 * rem;
+    const emptyH = 3.75 * rem;
+    svg.setAttribute('viewBox', `0 0 ${W} ${emptyH}`);
+    svg.setAttribute('height', emptyH);
+
+    if (shown.length === 0) {
+      svg.appendChild(el('text', { class: 'empty', x: W / 2, y: emptyH / 2, dy: '0.35em', 'text-anchor': 'middle' }, 'No data'));
+      svg.setAttribute('aria-label', 'No data');
+      $('key').hidden = true;
+      return;
+    }
+
+    // Horizontal layout: [city labels][negative values?][plot area][values].
+    // Label column is capped at 42% of the width so long names can't squeeze
+    // the bars to nothing on a phone.
+    const vals = shown.map(r => r[m.key]).filter(v => v !== null);
+    const labels = shown.map(r => fmt(type, r[m.key], m.compact));
+    const hasNeg = vals.some(v => v < 0);
+    const labelW = Math.min(textWidth(shown.map(r => r.CITY ?? DASH), 'name') + LABEL_PAD + 2, W * 0.42);
+    const valueW = textWidth(labels, 'val') + 2 * VALUE_PAD;
+    const left = labelW + (hasNeg ? valueW : 0);  // room for values left of negative bars
+    const right = W - valueW;                      // room for values right of positive bars
+
+    // Value domain: always includes 0, rounded out to whole tick steps.
+    let lo = Math.min(0, ...vals);
+    let hi = Math.max(0, ...vals);
+    if (hi === lo) hi = lo + 1;
+    const step = niceStep(hi - lo, Math.max(2, Math.floor((right - left) / TICK_GAP)));
+    lo = Math.floor(lo / step) * step;
+    hi = Math.ceil(hi / step) * step;
+    const x = v => left + (v - lo) / (hi - lo) * (right - left);  // value -> px
+
+    // Height grows with the number of rows.
+    const H = TOP + shown.length * ROW + 0.25 * rem;
+    svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    svg.setAttribute('height', H);
+
+    // Grid lines and tick labels across the top. +0.5 aligns 1px lines to
+    // the pixel grid so they stay sharp.
+    const gGrid = el('g', {});
+    for (let i = Math.round(lo / step); i <= Math.round(hi / step); i++) {
+      const t = i * step;
+      const xt = Math.round(x(t)) + 0.5;
+      if (t !== 0) gGrid.appendChild(el('line', { class: 'grid', x1: xt, x2: xt, y1: TOP - 0.25 * rem, y2: H }));
+      gGrid.appendChild(el('text', { class: 'tick', x: xt, y: 0.6875 * rem, 'text-anchor': 'middle' }, fmtTick(type, t)));
+    }
+    svg.appendChild(gGrid);
+
+    // One <g> per city: hover target, label, bar, value.
+    const x0 = x(0);
+    shown.forEach((r, i) => {
+      const v = r[m.key];
+      const y = TOP + i * ROW;
+      const g = el('g', { class: 'row' });
+      g.appendChild(el('rect', { class: 'hit', x: 0, y: y, width: W, height: ROW, rx: RADIUS }));
+      // City name, right-aligned against the plot.
+      g.appendChild(el('text', { class: 'name', x: labelW - LABEL_PAD, y: y + ROW / 2, dy: '0.35em', 'text-anchor': 'end' }, r.CITY ?? DASH));
+      // Bar, skipped when null or too short to see.
+      const by = y + (ROW - BAR) / 2;
+      if (v !== null && Math.abs(x(v) - x0) >= 0.5) {
+        g.appendChild(el('path', { class: v < 0 ? 'bar-neg' : 'bar-pos', d: barPath(x0, x(v), by, BAR, RADIUS) }));
+      }
+      // Value label just past the bar end: left of negative bars, right of
+      // positive ones, at the zero line when null.
+      const vx = v !== null && v < 0 ? x(v) - VALUE_PAD : (v === null ? x0 : x(v)) + VALUE_PAD;
+      g.appendChild(el('text', {
+        class: 'val', x: vx, y: y + ROW / 2, dy: '0.35em',
+        'text-anchor': v !== null && v < 0 ? 'end' : 'start'
+      }, labels[i]));
+      g.addEventListener('pointermove', e => showTip(e, r));
+      g.addEventListener('pointerleave', hideTip);
+      svg.appendChild(g);
+    });
+
+    // Zero line drawn last so it sits on top of the bars.
+    const zx = Math.round(x0) + 0.5;
+    svg.appendChild(el('line', { class: 'zero', x1: zx, x2: zx, y1: TOP - 0.25 * rem, y2: H }));
+
+    // Colour key only when red bars are present. Screen readers get a
+    // one-sentence summary instead of hundreds of SVG nodes.
+    $('key').hidden = !hasNeg;
+    const first = shown[0];
+    svg.setAttribute('aria-label',
+      `${$('chart-title').textContent}. ${shown.length} bars, largest first. ` +
+      `Largest: ${first.CITY}, ${fmt(type, first[m.key])}.`);
+  }
+
+  // ---- totals -----------------------------------------------------------
+  // Sum a column, treating nulls as 0.
+  function sum(f, k) { return f.reduce((s, r) => s + (r[k] ?? 0), 0); }
+
+  // Summary line under the controls, plus the "x of y cities" count.
+  // Growth is a simple (unweighted) average of the cities' percentages.
+  function drawTotals(f) {
+    const g = f.map(r => r.WEALTH_GROWTH_PCT).filter(v => v !== null);
+    const avg = g.length ? g.reduce((a, b) => a + b, 0) / g.length : null;
+    $('totals').textContent =
+      `Total for ${state.region === 'All' ? 'all regions' : state.region}: ` +
+      `${nfInt.format(f.length)} ${f.length === 1 ? 'city' : 'cities'} · ` +
+      `${nfInt.format(sum(f, 'MILLIONAIRES'))} millionaires · ` +
+      `${nfInt.format(sum(f, 'CENTI_MILLIONAIRES'))} centi-millionaires · ` +
+      `${nfInt.format(sum(f, 'BILLIONAIRES'))} billionaires · ` +
+      `average growth ${avg === null ? DASH : fmtPct(avg, 1)}`;
+    $('count').textContent = `${f.length} of ${rows.length} cities`;
+  }
+
+  // ---- table ------------------------------------------------------------
+  // Build the header once. Each header is a button: first click sorts by
+  // that column (text and rank ascending, numbers descending); clicking again
+  // reverses the direction.
+  const theadRow = $('thead-row');
+  const thByKey = {};
+  COLS.forEach(c => {
+    const th = document.createElement('th');
+    th.scope = 'col';
+    if (c.type !== 'text') th.className = 'num';
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.appendChild(document.createTextNode(c.label));
+    const arrow = document.createElement('span');
+    arrow.className = 'arrow';
+    b.appendChild(arrow);
+    b.addEventListener('click', () => {
+      if (state.sortKey === c.key) state.sortDir = -state.sortDir;
+      else { state.sortKey = c.key; state.sortDir = c.type === 'text' || c.key === 'RANK_NO' ? 1 : -1; }
+      render();
+    });
+    th.appendChild(b);
+    theadRow.appendChild(th);
+    thByKey[c.key] = { th: th, arrow: arrow };
+  });
+
+  // Show or hide the table and refill its body for rows `f`.
+  function drawTable(f) {
+    const wrap = $('table-wrap');
+    wrap.hidden = !state.tableOpen;
+    $('toggle-table').textContent = state.tableOpen ? 'Hide data ▴' : 'Show data ▾';
+    $('toggle-table').setAttribute('aria-expanded', String(state.tableOpen));
+
+    // Sort marker and aria-sort on the active column only.
+    COLS.forEach(c => {
+      const on = c.key === state.sortKey;
+      thByKey[c.key].th.setAttribute('aria-sort', on ? (state.sortDir > 0 ? 'ascending' : 'descending') : 'none');
+      thByKey[c.key].arrow.textContent = on ? (state.sortDir > 0 ? '▲' : '▼') : '';
+    });
+
+    // Sort: nulls last in both directions; ties broken by rank.
+    const k = state.sortKey;
+    const isText = colByKey[k].type === 'text';
+    const sorted = f.slice().sort((a, b) => {
+      const n = cmp(a[k], b[k]);
+      if (n || a[k] === null) return n || (a.RANK_NO - b.RANK_NO);
+      const d = isText ? a[k].localeCompare(b[k]) : a[k] - b[k];
+      return d * state.sortDir || (a.RANK_NO - b.RANK_NO);
+    });
+
+    const tbody = $('tbody');
+    tbody.textContent = '';
+    if (sorted.length === 0) {
+      const tr = document.createElement('tr');
+      const td = document.createElement('td');
+      td.colSpan = COLS.length;
+      td.textContent = 'No data';
+      tr.appendChild(td);
+      tbody.appendChild(tr);
+      return;
+    }
+    // Build rows in a fragment, then insert once (one reflow, not one per row).
+    const frag = document.createDocumentFragment();
+    sorted.forEach(r => {
+      const tr = document.createElement('tr');
+      COLS.forEach(c => {
+        const td = document.createElement('td');
+        if (c.type !== 'text') td.className = 'num';
+        td.textContent = fmt(c.type, r[c.key]);
+        tr.appendChild(td);
+      });
+      frag.appendChild(tr);
+    });
+    tbody.appendChild(frag);
+  }
+
+  // ---- CSV download -----------------------------------------------------
+  // Quote one CSV cell. Raw values, not display strings, so Excel gets numbers.
+  function csvCell(v) {
+    if (v === null || v === undefined) return '';
+    let s = String(v);
+    if (typeof v === 'string' && /^[=+\-@]/.test(s)) s = "'" + s; // stop Excel reading text as a formula
+    return /[",\r\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
+  }
+  // Download the rows for the current region (all columns, rank order).
+  function downloadCsv() {
+    const f = filtered();
+    const lines = [COLS.map(c => c.key).join(',')]
+      .concat(f.map(r => COLS.map(c => csvCell(r[c.key])).join(',')));
+    // BOM so Excel reads UTF-8 (e.g. "Èze") correctly
+    const blob = new Blob(['\uFEFF' + lines.join('\r\n') + '\r\n'], { type: 'text/csv;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    // File name includes the region, e.g. wealth_cities_north_america.csv
+    a.download = 'wealth_cities' + (state.region === 'All' ? '' : '_' + state.region.toLowerCase().replace(/[^a-z0-9]+/g, '_')) + '.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
+
+  // ---- render -----------------------------------------------------------
+  // Redraw everything from `state`. Cheap enough (≤ a few hundred rows) to
+  // run on every click.
+  function render() {
+    Object.keys(regionButtons).forEach(g => regionButtons[g].setAttribute('aria-pressed', String(g === state.region)));
+    Object.keys(measureButtons).forEach(k => measureButtons[k].setAttribute('aria-pressed', String(k === state.measure)));
+    const f = filtered();
+    drawChart(f);
+    drawTotals(f);
+    drawTable(f);
+  }
+
+  // Header text from the payload.
+  const title = payload.title || 'Report';
+  document.title = title;
+  $('title').textContent = title;
+  $('refreshed').textContent = payload.refreshed_utc || DASH;
+  $('source').textContent = payload.source || '';
+
+  render();
+
+  // Redraw the chart when its box changes width (rotation, window resize).
+  // Throttled to one redraw per animation frame.
+  let lastW = chartBox.clientWidth;
+  let raf = 0;
+  function onResize() {
+    if (chartBox.clientWidth === lastW) return;
+    lastW = chartBox.clientWidth;
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(() => drawChart(filtered()));
+  }
+  if (window.ResizeObserver) new ResizeObserver(onResize).observe(chartBox);
+  else window.addEventListener('resize', onResize);
+})();
+</script>
+</body>
+</html>
